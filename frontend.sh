@@ -7,6 +7,7 @@ dnf install -y nodejs
 curl -L -o /tmp/frontend.zip https://raw.githubusercontent.com/raghudevopsb89/roboshop-microservices/main/artifacts/frontend.zip
 rm -rf /tmp/frontend
 mkdir -p /tmp/frontend
+# shellcheck disable=SC2164
 cd /tmp/frontend
 unzip /tmp/frontend.zip
 npm install
@@ -16,4 +17,3 @@ cp -r out/* /usr/share/nginx/html/
 
 systemctl restart nginx
 systemctl enable nginx
-
